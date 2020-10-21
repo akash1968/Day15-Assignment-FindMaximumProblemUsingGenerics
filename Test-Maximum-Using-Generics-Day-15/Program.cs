@@ -11,8 +11,8 @@ namespace Test_Maximum_Using_Generics_Day_15
     {
         static void Main(string[] args)
         {
-            // Finds max among the given three numbers
-            Console.WriteLine(FindMaximum.MaxIntegerAmongThree(11212, 11209, 11232));
+            // UC2-Finds maximum float among the given three numbers
+            Console.WriteLine(FindMaximum.MaxFloatAmongThree(112.12, 112.09, 112.32));
         }
     }
 }

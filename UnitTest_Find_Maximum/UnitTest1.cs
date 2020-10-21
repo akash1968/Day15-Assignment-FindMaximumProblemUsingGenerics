@@ -12,36 +12,36 @@ namespace UnitTest_Find_Maximum
     [TestClass]
     public class UnitTest1
     {
-        // UC 1.1 : Given the maximum number at first position returns the same number.      
+        // UC 2.1 : Given the maximum float at first position returns the same number.      
         [TestMethod]
-        public void GivenMaxNumberAtFirstPosition_ReturnTheSameNumber()
+        public void GivenMaxFloatAtFirstPosition_ReturnTheSameFloat()
         {
             //Arrange
-            int expected = 200;
+            double expected = 12.21;
             //Act
-            int actual = FindMaximum.MaxIntegerAmongThree(200, 10, 100);
+            double actual = FindMaximum.MaxFloatAmongThree(12.21, 12.01, 12.19);
             //Assert
             Assert.AreEqual(expected, actual);
         }
-        // UC 1.2 : Given the maximum number at second position returns the same number.
+        // UC 2.2 : Given the maximum float at second position returns the same float.
        [TestMethod]
-        public void GivenMaxNumberAtSecondPosition_ReturnTheSameNumber()
+        public void GivenMaxFloatAtSecondPosition_ReturnTheSameFloat()
         {
             //Arrange
-            int expected = 1200;
+            double expected = 12.21;
             //Act
-            int actual = FindMaximum.MaxIntegerAmongThree(1122, 1200, 1109);
+            double actual = FindMaximum.MaxFloatAmongThree(12.01, 12.21, 12.19);
             //Assert
             Assert.AreEqual(expected, actual);
         }
-      // UC 1.3 : Given the maximum number at third position returns the same number.
+      // UC 2.3 : Given the maximum float at third position returns the same float.
         [TestMethod]
-        public void GivenMaxNumberAtThirdPosition_ReturnTheSameNumber()
+        public void GivenMaxFloatAtThirdPosition_ReturnTheSameFloat()
         {
             //Arrange
-            int expected = 2322;
+            double expected = 12.21;
             //Act
-            int actual = FindMaximum.MaxIntegerAmongThree(1232, 1221, 2322);
+            double actual = FindMaximum.MaxFloatAmongThree(12.01, 12.19, 12.21);
             //Assert
             Assert.AreEqual(expected, actual);
         }

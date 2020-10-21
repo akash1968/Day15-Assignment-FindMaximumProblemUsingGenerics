@@ -12,10 +12,10 @@ namespace Test_Maximum_Using_Generics_Day_15
 {
    public class FindMaximum
     {
-        // UC 1 : Finds the Maximum among three integers.
-        public static int MaxIntegerAmongThree(int firstValue, int secondValue, int thirdValue)
+        // UC 2 : Finds the Maximum among three float.
+        public static double MaxFloatAmongThree(double firstValue, double secondValue, double thirdValue)
         {
-            Console.WriteLine("Maximum number among {0}, {1} and {2}: ", firstValue, secondValue, thirdValue);
+            Console.WriteLine("Maximum float number among {0}, {1} and {2}: ", firstValue, secondValue, thirdValue);
             // Checks if firstValue is great then both secondValue and thirdValue
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
                 return firstValue;
