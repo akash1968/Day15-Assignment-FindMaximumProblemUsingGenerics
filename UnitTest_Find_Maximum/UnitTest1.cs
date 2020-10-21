@@ -12,36 +12,36 @@ namespace UnitTest_Find_Maximum
     [TestClass]
     public class UnitTest1
     {
-        // UC 2.1 : Given the maximum float at first position returns the same number.      
+        // UC 3.1 : Given the maximum string at first position returns the same string.      
         [TestMethod]
-        public void GivenMaxFloatAtFirstPosition_ReturnTheSameFloat()
+        public void GivenMaxStringAtFirstPosition_ReturnTheSameString()
         {
             //Arrange
-            double expected = 12.21;
+            string expected = "Gamma";
             //Act
-            double actual = FindMaximum.MaxFloatAmongThree(12.21, 12.01, 12.19);
+            string actual = FindMaximum.MaxStringAmongThree("Gamma", "Alpha", "Beta");
             //Assert
             Assert.AreEqual(expected, actual);
         }
-        // UC 2.2 : Given the maximum float at second position returns the same float.
-       [TestMethod]
-        public void GivenMaxFloatAtSecondPosition_ReturnTheSameFloat()
+        // UC 3.2 : Given the maximum string at second position returns the same string.
+        [TestMethod]
+        public void GivenMaxStringAtSecondPosition_ReturnTheSameString()
         {
             //Arrange
-            double expected = 12.21;
+            string expected = "Gamma";
             //Act
-            double actual = FindMaximum.MaxFloatAmongThree(12.01, 12.21, 12.19);
+            string actual = FindMaximum.MaxStringAmongThree("Alpha", "Gamma","Beta");
             //Assert
             Assert.AreEqual(expected, actual);
         }
-      // UC 2.3 : Given the maximum float at third position returns the same float.
+        // UC 3.3 : Given the maximum string at third position returns the same string.
         [TestMethod]
-        public void GivenMaxFloatAtThirdPosition_ReturnTheSameFloat()
+        public void GivenMaxStringAtThirdPosition_ReturnTheSameString()
         {
             //Arrange
-            double expected = 12.21;
+            string expected = "Gamma";
             //Act
-            double actual = FindMaximum.MaxFloatAmongThree(12.01, 12.19, 12.21);
+            string actual = FindMaximum.MaxStringAmongThree("Alpha", "Beta", "Gamma");
             //Assert
             Assert.AreEqual(expected, actual);
         }
