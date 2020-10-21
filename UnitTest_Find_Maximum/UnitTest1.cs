@@ -12,14 +12,15 @@ namespace UnitTest_Find_Maximum
     [TestClass]
     public class UnitTest1
     {
-        // Refactor 1: Add Generic Method     
+        // Refactor 2: Add Generic Class     
         [TestMethod]
-        public void Refactor1_AddedGenericMethod()
+        public void Refactor2_AddedGenericClass()
         {
             //Arrange
-            string expected = "Gamma";
+            double expected = 1121.22;
+            FindMaximum<double> maxFloat = new FindMaximum<double>(1121.22, 1105.32, 1033.23);
             //Act
-            string actual = FindMaximum.MaxValueAmongThree<string>("Gamma", "Alpha", "Beta");
+            double actual = maxFloat.MaximumMethod();
             //Assert
             Assert.AreEqual(expected, actual);
         }
