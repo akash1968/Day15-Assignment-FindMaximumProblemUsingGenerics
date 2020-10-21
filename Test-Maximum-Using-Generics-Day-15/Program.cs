@@ -11,10 +11,14 @@ namespace Test_Maximum_Using_Generics_Day_15
     {
         static void Main(string[] args)
         {
-            // Refactor all the 3 to One Generic Method and find the maximum
-            Console.WriteLine(FindMaximum.MaxValueAmongThree<int>(1222,1231,1021));
-            Console.WriteLine(FindMaximum.MaxValueAmongThree<double>(12.22, 12.31, 10.21));
-            Console.WriteLine(FindMaximum.MaxValueAmongThree<string>("Alpha", "Beta", "Gamma"));
+            //Refactor 2
+            // Refactor  all the 3 to One Generic Class and find the maximum
+            FindMaximum<int> maxInt = new FindMaximum<int>(12242, 32323, 21222);
+            FindMaximum<double> maxFloat = new FindMaximum<double>(122.43, 323.23, 212.22);
+            FindMaximum<string> maxString = new FindMaximum<string>("Alpha","Beta","Gamma");
+            Console.WriteLine(maxInt.MaximumMethod());
+            Console.WriteLine(maxFloat.MaximumMethod());
+            Console.WriteLine(maxString.MaximumMethod());
         }
     }
 }
