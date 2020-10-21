@@ -12,38 +12,17 @@ namespace UnitTest_Find_Maximum
     [TestClass]
     public class UnitTest1
     {
-        // UC 3.1 : Given the maximum string at first position returns the same string.      
+        // Refactor 1: Add Generic Method     
         [TestMethod]
-        public void GivenMaxStringAtFirstPosition_ReturnTheSameString()
+        public void Refactor1_AddedGenericMethod()
         {
             //Arrange
             string expected = "Gamma";
             //Act
-            string actual = FindMaximum.MaxStringAmongThree("Gamma", "Alpha", "Beta");
+            string actual = FindMaximum.MaxValueAmongThree<string>("Gamma", "Alpha", "Beta");
             //Assert
             Assert.AreEqual(expected, actual);
         }
-        // UC 3.2 : Given the maximum string at second position returns the same string.
-        [TestMethod]
-        public void GivenMaxStringAtSecondPosition_ReturnTheSameString()
-        {
-            //Arrange
-            string expected = "Gamma";
-            //Act
-            string actual = FindMaximum.MaxStringAmongThree("Alpha", "Gamma","Beta");
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
-        // UC 3.3 : Given the maximum string at third position returns the same string.
-        [TestMethod]
-        public void GivenMaxStringAtThirdPosition_ReturnTheSameString()
-        {
-            //Arrange
-            string expected = "Gamma";
-            //Act
-            string actual = FindMaximum.MaxStringAmongThree("Alpha", "Beta", "Gamma");
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
+        
     }
 }

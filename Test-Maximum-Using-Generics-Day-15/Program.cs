@@ -11,8 +11,10 @@ namespace Test_Maximum_Using_Generics_Day_15
     {
         static void Main(string[] args)
         {
-            // UC3-Finds maximum string among the given three string
-            Console.WriteLine(FindMaximum.MaxStringAmongThree("Apple", "Peach", "Banana"));
+            // Refactor all the 3 to One Generic Method and find the maximum
+            Console.WriteLine(FindMaximum.MaxValueAmongThree<int>(1222,1231,1021));
+            Console.WriteLine(FindMaximum.MaxValueAmongThree<double>(12.22, 12.31, 10.21));
+            Console.WriteLine(FindMaximum.MaxValueAmongThree<string>("Alpha", "Beta", "Gamma"));
         }
     }
 }
