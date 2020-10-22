@@ -12,7 +12,7 @@ namespace Test_Maximum_Using_Generics_Day_15
 {
    public class FindMaximum<T> where T: IComparable
     {
-        //Initialising  generic values
+        //Defining  generic values
         T firstValue, secondValue, thirdValue;
          //Creating Parameterized constructor which take generic values
         public FindMaximum(T firstValue, T secondValue, T thirdValue)
