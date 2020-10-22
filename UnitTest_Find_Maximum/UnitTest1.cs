@@ -24,6 +24,5 @@ namespace UnitTest_Find_Maximum
             //Assert
             Assert.AreEqual(expected, actual);
         }
-        
     }
 }

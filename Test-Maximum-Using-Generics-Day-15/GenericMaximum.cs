@@ -15,12 +15,17 @@ namespace Test_Maximum_Using_Generics_Day_15
             this.value = value;
         }
         //creating a find maximum method which sort the array and returns the maximum value
-        public T Max()
+        public void Max()
         {
+            // sorting array in ascending order
             Array.Sort(this.value);
-            //Returns the last element of the array after sorting in ascending order
-            return this.value[^1];
+            PrintMax();
         }
-
+        //Creating a Print maximum method to print the maximum value in the array
+        public void PrintMax()
+        {
+            //Returns the last element of the array 
+            Console.WriteLine("The maximum value among is " + this.value[^1]);
+        }
     }
 }
