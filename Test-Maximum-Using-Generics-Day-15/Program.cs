@@ -11,14 +11,22 @@ namespace Test_Maximum_Using_Generics_Day_15
     {
         static void Main(string[] args)
         {
-            //Refactor 2
-            // Refactor  all the 3 to One Generic Class and find the maximum
-            FindMaximum<int> maxInt = new FindMaximum<int>(12242, 32323, 21222);
-            FindMaximum<double> maxFloat = new FindMaximum<double>(122.43, 323.23, 212.22);
-            FindMaximum<string> maxString = new FindMaximum<string>("Alpha","Beta","Gamma");
-            Console.WriteLine(maxInt.MaximumMethod());
-            Console.WriteLine(maxFloat.MaximumMethod());
-            Console.WriteLine(maxString.MaximumMethod());
+            //UC:4- Extend the Maximum method to take more then three parameters
+            
+            // Find the maximum among int parameters in the int array
+            int[] intArray = { 1211, 2323, 4343, 5434, 8787, 5436, 7656 };
+            GenericMaximum<int> genericInt = new GenericMaximum<int>(intArray);
+            Console.WriteLine("The maximum integer is " + genericInt.Max());
+            
+            // Find the maximum among int parameters in the int array
+            double[] doubleArray = { 122.34, 211.32, 433.23, 432.11, 544.23, 232.11 };
+            GenericMaximum<double> genericDouble = new GenericMaximum<double>(doubleArray);
+            Console.WriteLine("The maximum Float is " + genericDouble.Max());
+           
+            // Find the maximum among int parameters in the int array
+            string[] stringArray = { "Alpha", "Beta", "Gamma", "Zeta" };
+            GenericMaximum<string> genericString = new GenericMaximum<string>(stringArray);
+            Console.WriteLine("The maximum String is " + genericString.Max());
         }
     }
 }
